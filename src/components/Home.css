@@ -1,0 +1,18 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description-container {
+    max-width: 600px;
+}
+
+/* Añade más estilos aquí según tus necesidades */
