@@ -1,35 +1,48 @@
-import { TextField, Button, Typography, Link, Container } from '@mui/material';
+import { TextField, Button, Typography, Link, Container, CircularProgress, Snackbar, Alert } from '@mui/material';
 import { useState } from 'react';
 import { sendEmail } from '../services/mail';
 
 
 const Contacto = () => {
-
     const [nombre, setNombre] = useState('');
     const [email, setEmail] = useState('');
     const [asunto, setAsunto] = useState('');
     const [mensaje, setMensaje] = useState('');
+    const [sending, setSending] = useState(false);
+    const [sended, setSended] = useState(false);
 
     const handleSubmit = async(event) => {
         event.preventDefault();
+        setSending(true);
         const formData = {
             name: nombre,
             email: email,
             subject: asunto,
             message: mensaje
         };
+
         //console.log(formData);
         let response = await sendEmail(formData);
         if (response.status === "ok") {
-            alert('Mensaje enviado correctamente');
+            setNombre('');
+            setEmail('');
+            setAsunto('');
+            setMensaje('');
+            setSending(false);
+            setSended(true);
         } else {
-            alert('Error al enviar el mensaje');
+            setNombre('');
+            setEmail('');
+            setAsunto('');
+            setMensaje('');
+            setSending(false);
+            console.log(response);
         }
     };
 
     return (
         <>
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" style={{ backgroundColor: '#1a1b1c', color: 'white', padding: '20px', borderRadius: '10px' }}>
             <form onSubmit={handleSubmit}>
                 <TextField 
                     label="Nombre" 
@@ -37,7 +50,14 @@ const Contacto = () => {
                     onChange={(e) => setNombre(e.target.value)}
                     fullWidth 
                     margin="normal" 
+                    autoComplete='off'
                     required 
+                    InputLabelProps={{
+                        style: { color: '#fff', borderColor: '#fff'},
+                    }}
+                    InputProps={{
+                        style: { color: 'white', borderColor: 'white' },
+                    }}
                 />
                 <TextField 
                     label="Correo Electrónico" 
@@ -46,7 +66,14 @@ const Contacto = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     fullWidth 
                     margin="normal" 
+                    autoComplete='off'
                     required 
+                    InputLabelProps={{
+                        style: { color: '#fff', borderColor: '#fff'},
+                    }}
+                    InputProps={{
+                        style: { color: 'white', borderColor: 'white' },
+                    }}
                 />
                 <TextField 
                     label="Asunto" 
@@ -54,7 +81,14 @@ const Contacto = () => {
                     onChange={(e) => setAsunto(e.target.value)}
                     fullWidth 
                     margin="normal" 
+                    autoComplete='off'
                     required 
+                    InputLabelProps={{
+                        style: { color: '#fff', borderColor: '#fff'},
+                    }}
+                    InputProps={{
+                        style: { color: 'white', borderColor: 'white' },
+                    }}
                 />
                 <TextField 
                     label="Mensaje" 
@@ -64,12 +98,27 @@ const Contacto = () => {
                     onChange={(e) => setMensaje(e.target.value)}
                     fullWidth 
                     margin="normal" 
+                    autoComplete='off'
                     required 
+                    InputLabelProps={{
+                        style: { color: '#fff', borderColor: '#fff'},
+                    }}
+                    InputProps={{
+                        style: { color: 'white', borderColor: 'white' },
+                    }}
                 />
 
-                <Button type="submit" variant="contained" color="primary">
-                    Enviar
+                <Button type="submit" variant="contained" color="primary" disabled={sending} style={{display: sended ? 'none' : 'inline-flex'}}>
+                {sending ? (
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <CircularProgress size={24} style={{ marginRight: '10px' }} />
+                    Enviando...
+                    </div>
+                ) : (
+                    "Enviar"
+                )}
                 </Button>
+
             </form>
                 <Typography variant="h6">Información de Contacto</Typography>
                 <Typography>1234 Innovation Drive, Tech City, EC 12345</Typography>
@@ -82,6 +131,15 @@ const Contacto = () => {
                 <Link href="https://twitter.com/EncodeEnterprise" target="_blank">Twitter</Link>
                 <Link href="https://facebook.com/EncodeEnterprise" target="_blank">Facebook</Link>
             </Container>
+            <Snackbar
+                open={sended}
+                autoHideDuration={3000}
+                onClose={() => setSended(false)}
+            >
+                <Alert onClose={()=> setSended(false)} severity="success" sx={{ width: '100%' }}>
+                    Mensaje enviado correctamente!
+                </Alert>
+            </Snackbar>
         </>
     );
 }
