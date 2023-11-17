@@ -41,7 +41,7 @@ const Contacto = () => {
     };
 
     return (
-        <>
+        <div id='Contacto'>
             <Container maxWidth="sm" style={{ backgroundColor: '#1a1b1c', color: 'white', padding: '20px', borderRadius: '10px' }}>
             <form onSubmit={handleSubmit}>
                 <TextField 
@@ -140,7 +140,7 @@ const Contacto = () => {
                     Mensaje enviado correctamente!
                 </Alert>
             </Snackbar>
-        </>
+        </div>
     );
 }
 

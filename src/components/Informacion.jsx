@@ -1,7 +1,13 @@
 const Informacion = () => {
-
+    
     return(
-        <h1>Informacion</h1>
+        <div id="Informacion">
+            <div className="row">
+                <div className="col-12">
+                    <h1>Informacion</h1>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,7 +1,13 @@
 const Servicios = () => {
 
     return(
-        <h1>Servicios que ofrecemos</h1>
+        <div id="Servicios">
+            <div className="row">
+                <div className="col-12">
+                    <h1>Servicios</h1>
+                </div>
+            </div>
+        </div>
     )
 }
 
