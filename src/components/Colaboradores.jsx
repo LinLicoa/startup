@@ -3,28 +3,28 @@ import { Box, Card, CardContent, CardMedia, Typography, List, ListItem } from '@
 const colaboradores = [
     {
         nombre: "Lindsay Villegas",
-        imagen: "./src/assets/fotoLindsay.png", // Cambia esto por la ruta real de la imagen
-        logros: ["Logro 1", "Logro 2", "Logro 3"]
+        imagen: "./src/assets/fotoLindsay.png",
+        logros: ["CEO y Fundadora", "Lindsay lidera con una visión futurista y estratégica, destacando en proyectos de innovación tecnológica y desarrollo ágil."]
     },
     {
         nombre: "Elías Cando",
-        imagen: "./src/assets/fotoElias.jpg", // Cambia esto por la ruta real de la imagen
-        logros: ["Logro 1", "Logro 2", "Logro 3"]
+        imagen: "./src/assets/fotoElias.jpg", 
+        logros: ["Director Técnico", "Elías combina sus estudios con su experiencia práctica, con un enfoque en tecnologías emergentes. "]
     },
     {
         nombre: "Rogger Párraga",
-        imagen: "./src/assets/fotoRogger.jpeg", // Cambia esto por la ruta real de la imagen
-        logros: ["Logro 1", "Logro 2", "Logro 3"]
+        imagen: "./src/assets/fotoRogger.jpeg", 
+        logros: ["Jefe de Desarrollo", "Estudiante con una sólida formación en algoritmos y estructuras de datos"]
     },
     {
         nombre: "Alison Chancay",
-        imagen: "./src/assets/fotoAlison.png", // Cambia esto por la ruta real de la imagen
-        logros: ["Logro 1", "Logro 2", "Logro 3"]
+        imagen: "./src/assets/fotoAlison.png", 
+        logros: ["Líder de Proyectos", "Alison, combina sus estudios con la habilidad práctica para alinear equipos multidisciplinarios hacia metas comunes."]
     },
     {
         nombre: "Freddy Yagual",
-        imagen: "./src/assets/fotoFreddy.jpeg", // Cambia esto por la ruta real de la imagen
-        logros: ["Logro 1", "Logro 2", "Logro 3"]
+        imagen: "./src/assets/fotoFreddy.jpeg", 
+        logros: [" Especialista en Cloud y Seguridad", "Freddy aporta soluciones innovadoras y seguras para la infraestructura en la nube de la empresa."]
     }
 
     
