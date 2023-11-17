@@ -1,4 +1,3 @@
-import './Home.css'
 import { Box, Container, Typography, Button } from '@mui/material';
 import backgroundImage from './../assets/pexels-fauxels-3184424.jpg'; 
 
