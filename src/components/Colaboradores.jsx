@@ -32,6 +32,7 @@ const colaboradores = [
 
 function Colaboradores() {
     return (
+        <div id="Colaboradores">
         <Box sx={{ textAlign: 'center', marginTop: 2 }}>
         <Typography variant="h2" component="h2" sx={{ fontWeight: 'bold', marginBottom: 5, color: 'white' }}> 
             Colaboradores
@@ -83,6 +84,7 @@ function Colaboradores() {
             ))}
         </Box>
     </Box>
+    </div>
     )
 }
 
