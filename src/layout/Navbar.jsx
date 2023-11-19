@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, Button, makeStyles } from '@mui/material';
-
+import encodeLogo from './../assets/encode-logo.svg';
 
 const NavBar = () => {
 
@@ -16,17 +16,14 @@ const NavBar = () => {
             top: '0',
             }}
         >
-        <Toolbar>
-          <Typography variant="h6">
-            Encode Enterprise
-          </Typography>
-          <Button 
-            color="inherit"
-            style={{
-                marginLeft: 'auto',
-            }}
-            href='#Home'
-          >Inicio</Button>
+        <Toolbar
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            paddingLeft: '25%',
+          }}
+        >
+          <img src={encodeLogo} alt="Encode Enterprise" style={{ height: '30px', marginRight: '10px' }} />
           <Button 
             color="inherit"
             href='#Servicios'
