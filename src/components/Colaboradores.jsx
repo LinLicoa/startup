@@ -1,29 +1,34 @@
 import { Box, Card, CardContent, CardMedia, Typography, List, ListItem } from '@mui/material';
+import fotoLindsay from './../assets/fotoLindsay.png'
+import fotoElias from './../assets/fotoElias.jpg'
+import fotoRogger from './../assets/fotoRogger.jpeg'
+import fotoAlison from './../assets/fotoAlison.png'
+import fotoFreddy from './../assets/fotoFreddy.jpeg'
 
 const colaboradores = [
     {
         nombre: "Lindsay Villegas",
-        imagen: "./src/assets/fotoLindsay.png",
+        imagen: fotoLindsay,
         logros: ["CEO y Fundadora", "Lindsay lidera con una visión futurista y estratégica, destacando en proyectos de innovación tecnológica y desarrollo ágil."]
     },
     {
         nombre: "Elías Cando",
-        imagen: "./src/assets/fotoElias.jpg", 
+        imagen: fotoElias,
         logros: ["Director Técnico", "Elías combina sus estudios con su experiencia práctica, con un enfoque en tecnologías emergentes. "]
     },
     {
         nombre: "Rogger Párraga",
-        imagen: "./src/assets/fotoRogger.jpeg", 
+        imagen: fotoRogger,
         logros: ["Jefe de Desarrollo", "Estudiante con una sólida formación en algoritmos y estructuras de datos"]
     },
     {
         nombre: "Alison Chancay",
-        imagen: "./src/assets/fotoAlison.png", 
+        imagen: fotoAlison, 
         logros: ["Líder de Proyectos", "Alison, combina sus estudios con la habilidad práctica para alinear equipos multidisciplinarios hacia metas comunes."]
     },
     {
         nombre: "Freddy Yagual",
-        imagen: "./src/assets/fotoFreddy.jpeg", 
+        imagen: fotoFreddy,
         logros: [" Especialista en Cloud y Seguridad", "Freddy aporta soluciones innovadoras y seguras para la infraestructura en la nube de la empresa."]
     }
 
