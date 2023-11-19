@@ -4,7 +4,7 @@ import backgroundImage from './../assets/pexels-fauxels-3184424.jpg';
 const Home = () => {
 
     return (
-        <div>
+        <div id='Home'>
             <Box 
                 sx={{
                     position: 'relative',

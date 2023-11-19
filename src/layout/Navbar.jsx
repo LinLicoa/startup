@@ -23,7 +23,16 @@ const NavBar = () => {
             paddingLeft: '25%',
           }}
         >
-          <img src={encodeLogo} alt="Encode Enterprise" style={{ height: '30px', marginRight: '10px' }} />
+          <img 
+            src={encodeLogo} 
+            alt="Encode Enterprise" 
+            style={{ height: '30px', marginRight: '10px', cursor: 'pointer'}} 
+            onClick={
+              () => {
+                window.location.href = '#Home';
+              }
+            }
+          />
           <Button 
             color="inherit"
             href='#Servicios'
